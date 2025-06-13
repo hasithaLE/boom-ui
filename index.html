@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Boom - Sri Lanka's Premier B2B Wholesale Marketplace</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-container">
+                    <span class="logo-text">Boom</span>
+                    <div class="logo-tagline">B2B Wholesale Marketplace</div>
+                </div>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="search-container mx-auto d-none d-lg-block">
+                <div class="input-group">
+                    <input type="text" class="form-control search-input" placeholder="Search wholesale products, suppliers, and more...">
+                    <button class="btn btn-primary search-btn" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#suppliers">Suppliers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-6">                    <div class="hero-content">
+                        <h1 class="hero-title">Sri Lanka's Premier <span class="text-yellow">B2B Wholesale</span> Marketplace</h1>
+                        <p class="hero-subtitle">Connect directly with suppliers and manufacturers. Source products in bulk at wholesale prices. The only platform you need for B2B procurement in Sri Lanka.</p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <h3>2,500+</h3>
+                                <p>Verified Suppliers</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>100K+</h3>
+                                <p>Wholesale Products</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>50+</h3>
+                                <p>Product Categories</p>
+                            </div>
+                        </div>                        <div class="hero-buttons">
+                            <a href="#categories" class="btn btn-orange btn-lg me-3">
+                                <i class="fas fa-search me-2"></i>Find Suppliers
+                            </a>
+                            <a href="#" class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
+                                <i class="fas fa-industry me-2"></i>Register as Supplier
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">                        <div class="floating-cards">
+                            <div class="card floating-card card-1">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-industry text-orange fa-2x mb-2"></i>
+                                    <h6>Direct from Manufacturers</h6>
+                                </div>
+                            </div>
+                            <div class="card floating-card card-2">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-boxes text-yellow fa-2x mb-2"></i>
+                                    <h6>Bulk Orders</h6>
+                                </div>
+                            </div>
+                            <div class="card floating-card card-3">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-handshake text-orange fa-2x mb-2"></i>
+                                    <h6>B2B Pricing</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Mobile Search (visible on mobile) -->
+    <section class="mobile-search d-lg-none">
+        <div class="container">
+            <div class="input-group">
+                <input type="text" class="form-control search-input" placeholder="Search wholesale products...">
+                <button class="btn btn-primary search-btn" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section id="categories" class="categories-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Wholesale Product Categories</h2>
+                    <p class="section-subtitle">Browse products by category for bulk orders</p>
+                </div>
+            </div>
+            <div class="row g-4">                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="product-details.html" class="category-link">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h5>Electronics & Tech</h5>
+                            <p>Min. Order: 25 units</p>
+                            <small class="text-muted">2,450 suppliers</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h5>Textiles & Apparel</h5>
+                        <p>Min. Order: 100 units</p>
+                        <small class="text-muted">1,850 suppliers</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h5>Home & Garden</h5>
+                        <p>Min. Order: 50 units</p>
+                        <small class="text-muted">980 suppliers</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5>Food & Beverages</h5>
+                        <p>Min. Order: 200 units</p>
+                        <small class="text-muted">650 suppliers</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h5>Industrial Equipment</h5>
+                        <p>Min. Order: 10 units</p>
+                        <small class="text-muted">420 suppliers</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h5>Automotive Parts</h5>
+                        <p>Min. Order: 50 units</p>
+                        <small class="text-muted">320 suppliers</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5>Health & Beauty</h5>
+                        <p>Min. Order: 100 units</p>
+                        <small class="text-muted">780 suppliers</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h5>Agriculture</h5>
+                        <p>Min. Order: 500 kg</p>
+                        <small class="text-muted">240 suppliers</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Why Supply on Boom -->
+    <section class="why-sell-section py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="why-sell-content">
+                        <h2 class="section-title">Why Supply on <span class="text-yellow">Boom</span>?</h2>
+                        <p class="section-subtitle">Join Sri Lanka's largest B2B wholesale network</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-handshake text-orange"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Direct Business Connections</h5>
+                                    <p>Connect directly with retailers, distributors, and business buyers</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-boxes text-yellow"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Bulk Order Management</h5>
+                                    <p>Advanced tools to manage large volume orders efficiently</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line text-orange"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Business Growth Analytics</h5>
+                                    <p>Track performance, analyze trends, and grow your wholesale business</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt text-yellow"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Verified Buyer Network</h5>
+                                    <p>Deal with verified businesses and secure payment guarantees</p>
+                                </div>
+                            </div>
+                        </div>
+                          <a href="supplier-onboarding.html" class="btn btn-orange btn-lg mt-4">
+                            <i class="fas fa-industry me-2"></i>Register as Supplier
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">                    <div class="why-sell-image">
+                        <div class="seller-dashboard-preview">
+                            <div class="dashboard-header">
+                                <h6><i class="fas fa-industry me-2"></i>Supplier Dashboard</h6>
+                            </div>
+                            <div class="dashboard-stats">
+                                <div class="stat">
+                                    <h4>Rs. 2.5M</h4>
+                                    <p>Monthly Revenue</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>45</h4>
+                                    <p>Active Buyers</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>4.9★</h4>
+                                    <p>Supplier Rating</p>
+                                </div>
+                            </div>
+                            <div class="dashboard-actions mt-3">
+                                <a href="seller-dashboard.html" class="btn btn-outline-orange btn-sm">
+                                    <i class="fas fa-eye me-1"></i>View Dashboard
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- B2B Features Section -->
+    <section id="suppliers" class="wholesale-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="wholesale-image">
+                        <div class="b2b-preview">
+                            <div class="b2b-header">
+                                <h6><i class="fas fa-clipboard-list me-2"></i>Request for Quotation (RFQ)</h6>
+                            </div>
+                            <div class="b2b-content">
+                                <div class="wholesale-item">
+                                    <div class="item-info">
+                                        <h6>Electronics Components</h6>
+                                        <p>Quantity: 5,000 units</p>
+                                    </div>
+                                    <div class="item-price">
+                                        <span class="bulk-price">12 Quotes</span>
+                                        <small>received</small>
+                                    </div>
+                                </div>
+                                <div class="wholesale-item">
+                                    <div class="item-info">
+                                        <h6>Textile Materials</h6>
+                                        <p>Quantity: 10,000 meters</p>
+                                    </div>
+                                    <div class="item-price">
+                                        <span class="bulk-price">8 Quotes</span>
+                                        <small>received</small>
+                                    </div>
+                                </div>
+                                <div class="wholesale-item">
+                                    <div class="item-info">
+                                        <h6>Industrial Equipment</h6>
+                                        <p>Quantity: 25 units</p>
+                                    </div>
+                                    <div class="item-price">
+                                        <span class="bulk-price">15 Quotes</span>
+                                        <small>received</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="wholesale-content">
+                        <h2 class="section-title">Advanced <span class="text-orange">B2B Features</span></h2>
+                        <p class="section-subtitle">Everything you need for wholesale procurement</p>
+                        
+                        <div class="wholesale-features">
+                            <div class="wholesale-feature">
+                                <i class="fas fa-clipboard-list text-orange me-3"></i>
+                                <div>
+                                    <h5>Request for Quotation (RFQ)</h5>
+                                    <p>Post your requirements and receive competitive quotes from suppliers</p>
+                                </div>
+                            </div>
+                            <div class="wholesale-feature">
+                                <i class="fas fa-certificate text-yellow me-3"></i>
+                                <div>
+                                    <h5>Verified Suppliers</h5>
+                                    <p>All suppliers go through strict verification and quality checks</p>
+                                </div>
+                            </div>
+                            <div class="wholesale-feature">
+                                <i class="fas fa-truck-loading text-orange me-3"></i>
+                                <div>
+                                    <h5>Bulk Logistics</h5>
+                                    <p>Specialized shipping and logistics for large quantity orders</p>
+                                </div>
+                            </div>
+                            <div class="wholesale-feature">
+                                <i class="fas fa-file-contract text-yellow me-3"></i>
+                                <div>
+                                    <h5>Trade Agreements</h5>
+                                    <p>Secure contracts and payment terms with legal protection</p>
+                                </div>
+                            </div>
+                        </div>
+                          <div class="wholesale-buttons">
+                            <a href="#" class="btn btn-orange btn-lg me-3" data-bs-toggle="modal" data-bs-target="#rfqModal">
+                                <i class="fas fa-clipboard-list me-2"></i>Post RFQ
+                            </a>
+                            <a href="product-details.html" class="btn btn-yellow btn-lg me-3">
+                                <i class="fas fa-eye me-2"></i>View Sample Product
+                            </a>
+                            <a href="#" class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <i class="fas fa-user-tie me-2"></i>Business Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Featured Suppliers -->
+    <section class="trending-section py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Featured Suppliers</h2>
+                    <p class="section-subtitle">Top-rated suppliers with excellent track records</p>
+                </div>
+            </div>
+            <div class="row g-4" id="featured-suppliers">
+                <!-- Suppliers will be loaded here by JavaScript -->
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-outline-dark btn-lg">
+                    <i class="fas fa-industry me-2"></i>View All Suppliers
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Wholesale Opportunities -->
+    <section class="deals-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Latest <span class="text-yellow">Opportunities</span></h2>
+                    <p class="section-subtitle">Fresh wholesale opportunities and bulk deals</p>
+                </div>
+            </div>
+            <div class="row g-4" id="wholesale-opportunities">
+                <!-- Opportunities will be loaded here by JavaScript -->
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-orange btn-lg">
+                    <i class="fas fa-handshake me-2"></i>View All Opportunities
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">                        <div class="footer-logo mb-3">
+                            <span class="logo-text text-yellow">Boom</span>
+                            <div class="logo-tagline text-light">B2B Wholesale Marketplace</div>
+                        </div>
+                        <p>Sri Lanka's premier B2B wholesale marketplace connecting businesses with verified suppliers and manufacturers.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h5>About</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="product-details.html">Sample Product</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h5>Support</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Returns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h5>Suppliers</h5>
+                        <ul class="footer-links">
+                            <li><a href="supplier-onboarding.html">Register as Supplier</a></li>
+                            <li><a href="seller-dashboard.html">Supplier Hub</a></li>
+                            <li><a href="#">Verification Process</a></li>
+                            <li><a href="#">Supplier Tools</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h5>Newsletter</h5>
+                        <p>Subscribe to get updates on deals and new arrivals</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your email">
+                                <button class="btn btn-orange" type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Boom. All rights reserved.</p>
+                </div>                <div class="col-md-6 text-md-end">
+                    <a href="sitemap.html" class="text-light me-3">Site Map</a>
+                    <a href="#" class="text-light me-3">Privacy Policy</a>
+                    <a href="#" class="text-light me-3">Terms of Service</a>
+                    <a href="#" class="text-light">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- Unified Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login to Boom</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="btn-group w-100" role="group">
+                            <input type="radio" class="btn-check" name="loginType" id="buyerLogin" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="buyerLogin">
+                                <i class="fas fa-shopping-cart me-2"></i>Buyer Login
+                            </label>
+
+                            <input type="radio" class="btn-check" name="loginType" id="supplierLogin" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="supplierLogin">
+                                <i class="fas fa-industry me-2"></i>Supplier Login
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <a href="#" class="text-decoration-none">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="handleLogin()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unified Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register with Boom</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Registration Type Selection -->
+                    <div id="registrationTypeSelection">
+                        <div class="text-center mb-4">
+                            <h6>Choose your registration type:</h6>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="registration-card" onclick="selectRegistrationType('buyer')">
+                                    <div class="card h-100 border-2">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-shopping-cart fa-3x text-primary mb-3"></i>
+                                            <h5>Register as Buyer</h5>
+                                            <p class="text-muted">Find wholesale products and connect with suppliers</p>
+                                            <ul class="list-unstyled text-start">
+                                                <li><i class="fas fa-check text-success me-2"></i>Browse wholesale products</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Request quotes from suppliers</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Bulk order management</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="registration-card" onclick="selectRegistrationType('supplier')">
+                                    <div class="card h-100 border-2">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-industry fa-3x text-orange mb-3"></i>
+                                            <h5>Register as Supplier</h5>
+                                            <p class="text-muted">Sell your products to businesses across Sri Lanka</p>
+                                            <ul class="list-unstyled text-start">
+                                                <li><i class="fas fa-check text-success me-2"></i>List your products</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Manage supplier dashboard</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Access to verified buyers</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buyer Registration Form -->
+                    <div id="buyerRegistrationForm" style="display: none;">
+                        <div class="d-flex align-items-center mb-4">
+                            <button type="button" class="btn btn-link p-0 me-3" onclick="showRegistrationTypeSelection()">
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
+                            <h6 class="mb-0"><i class="fas fa-shopping-cart me-2 text-primary"></i>Buyer Registration</h6>
+                        </div>
+                        
+                        <form id="buyerForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="buyerFirstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="buyerFirstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="buyerLastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="buyerLastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="buyerEmail" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="buyerEmail" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="buyerPhone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="buyerPhone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="buyerCompany" class="form-label">Company Name *</label>
+                                <input type="text" class="form-control" id="buyerCompany" required>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="buyerPassword" class="form-label">Password *</label>
+                                    <input type="password" class="form-control" id="buyerPassword" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="buyerConfirmPassword" class="form-label">Confirm Password *</label>
+                                    <input type="password" class="form-control" id="buyerConfirmPassword" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="buyerTerms" required>
+                                <label class="form-check-label" for="buyerTerms">
+                                    I agree to the <a href="#" class="text-decoration-none">Terms and Conditions</a>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Supplier Registration Form -->
+                    <div id="supplierRegistrationForm" style="display: none;">
+                        <div class="d-flex align-items-center mb-4">
+                            <button type="button" class="btn btn-link p-0 me-3" onclick="showRegistrationTypeSelection()">
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
+                            <h6 class="mb-0"><i class="fas fa-industry me-2 text-orange"></i>Supplier Registration</h6>
+                        </div>
+                        
+                        <form id="supplierForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierCompanyName" class="form-label">Company Name *</label>
+                                    <input type="text" class="form-control" id="supplierCompanyName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierRegNumber" class="form-label">Registration Number *</label>
+                                    <input type="text" class="form-control" id="supplierRegNumber" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierContactPerson" class="form-label">Contact Person *</label>
+                                    <input type="text" class="form-control" id="supplierContactPerson" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierDesignation" class="form-label">Designation *</label>
+                                    <input type="text" class="form-control" id="supplierDesignation" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierEmail" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="supplierEmail" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierPhone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="supplierPhone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="supplierAddress" class="form-label">Company Address *</label>
+                                <textarea class="form-control" id="supplierAddress" rows="2" required></textarea>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierBusinessType" class="form-label">Business Type *</label>
+                                    <select class="form-select" id="supplierBusinessType" required>
+                                        <option value="">Select business type</option>
+                                        <option value="manufacturer">Manufacturer</option>
+                                        <option value="distributor">Distributor</option>
+                                        <option value="wholesaler">Wholesaler</option>
+                                        <option value="importer">Importer</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierCategory" class="form-label">Primary Category *</label>
+                                    <select class="form-select" id="supplierCategory" required>
+                                        <option value="">Select category</option>
+                                        <option value="electronics">Electronics & Technology</option>
+                                        <option value="textiles">Textiles & Apparel</option>
+                                        <option value="food">Food & Beverages</option>
+                                        <option value="construction">Construction Materials</option>
+                                        <option value="automotive">Automotive Parts</option>
+                                        <option value="healthcare">Healthcare & Medical</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierPassword" class="form-label">Password *</label>
+                                    <input type="password" class="form-control" id="supplierPassword" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="supplierConfirmPassword" class="form-label">Confirm Password *</label>
+                                    <input type="password" class="form-control" id="supplierConfirmPassword" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="supplierTerms" required>
+                                <label class="form-check-label" for="supplierTerms">
+                                    I agree to the <a href="#" class="text-decoration-none">Terms and Conditions</a>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div id="registrationTypeFooter">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                    <div id="buyerRegistrationFooter" style="display: none;">
+                        <button type="button" class="btn btn-secondary" onclick="showRegistrationTypeSelection()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="handleBuyerRegistration()">Register as Buyer</button>
+                    </div>
+                    <div id="supplierRegistrationFooter" style="display: none;">
+                        <button type="button" class="btn btn-secondary" onclick="showRegistrationTypeSelection()">Back</button>
+                        <button type="button" class="btn btn-orange" onclick="handleSupplierRegistration()">Register as Supplier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- RFQ Manager Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="rfqOffcanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">RFQ Manager</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="rfq-empty text-center">
+                <i class="fas fa-clipboard-list fa-3x text-muted mb-3"></i>
+                <h6>No active RFQs</h6>
+                <p class="text-muted">Post a request for quotation to get competitive quotes</p>
+                <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#rfqModal" data-bs-dismiss="offcanvas">Post RFQ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RFQ Modal -->
+    <div class="modal fade" id="rfqModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Post Request for Quotation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <label for="rfqTitle" class="form-label">Product/Service Title *</label>
+                                <input type="text" class="form-control" id="rfqTitle" placeholder="e.g., Industrial Grade LED Bulbs" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="rfqCategory" class="form-label">Category *</label>
+                                <select class="form-select" id="rfqCategory" required>
+                                    <option value="">Select category</option>
+                                    <option value="electronics">Electronics & Tech</option>
+                                    <option value="textiles">Textiles & Apparel</option>
+                                    <option value="home">Home & Garden</option>
+                                    <option value="food">Food & Beverages</option>
+                                    <option value="industrial">Industrial Equipment</option>
+                                    <option value="automotive">Automotive Parts</option>
+                                    <option value="health">Health & Beauty</option>
+                                    <option value="agriculture">Agriculture</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="rfqQuantity" class="form-label">Quantity *</label>
+                                <input type="number" class="form-control" id="rfqQuantity" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="rfqUnit" class="form-label">Unit</label>
+                                <select class="form-select" id="rfqUnit">
+                                    <option value="pieces">Pieces</option>
+                                    <option value="kg">Kilograms</option>
+                                    <option value="meters">Meters</option>
+                                    <option value="liters">Liters</option>
+                                    <option value="sets">Sets</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="rfqBudget" class="form-label">Budget Range (Rs.)</label>
+                                <input type="text" class="form-control" id="rfqBudget" placeholder="50,000 - 100,000">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rfqDescription" class="form-label">Detailed Requirements *</label>
+                            <textarea class="form-control" id="rfqDescription" rows="4" placeholder="Describe your requirements in detail including specifications, quality standards, delivery timeline, etc." required></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="rfqDeliveryDate" class="form-label">Required Delivery Date</label>
+                                <input type="date" class="form-control" id="rfqDeliveryDate">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="rfqLocation" class="form-label">Delivery Location</label>
+                                <input type="text" class="form-control" id="rfqLocation" placeholder="City, Province">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-orange">Post RFQ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    
+    <!-- Modal Management Scripts -->
+    <script>
+        // Registration type selection
+        function selectRegistrationType(type) {
+            document.getElementById('registrationTypeSelection').style.display = 'none';
+            document.getElementById('registrationTypeFooter').style.display = 'none';
+            
+            if (type === 'buyer') {
+                document.getElementById('buyerRegistrationForm').style.display = 'block';
+                document.getElementById('buyerRegistrationFooter').style.display = 'block';
+            } else if (type === 'supplier') {
+                document.getElementById('supplierRegistrationForm').style.display = 'block';
+                document.getElementById('supplierRegistrationFooter').style.display = 'block';
+            }
+        }
+        
+        function showRegistrationTypeSelection() {
+            document.getElementById('buyerRegistrationForm').style.display = 'none';
+            document.getElementById('supplierRegistrationForm').style.display = 'none';
+            document.getElementById('buyerRegistrationFooter').style.display = 'none';
+            document.getElementById('supplierRegistrationFooter').style.display = 'none';
+            
+            document.getElementById('registrationTypeSelection').style.display = 'block';
+            document.getElementById('registrationTypeFooter').style.display = 'block';
+        }
+        
+        // Login handler
+        function handleLogin() {
+            const loginType = document.querySelector('input[name="loginType"]:checked').id;
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Simulate authentication
+            if (loginType === 'supplierLogin') {
+                // Redirect to supplier dashboard
+                window.location.href = 'seller-dashboard.html';
+            } else {
+                // Redirect to buyer dashboard (could be a different page)
+                alert('Buyer login successful! (Would redirect to buyer dashboard)');
+                window.location.href = 'index.html';
+            }
+        }
+        
+        // Registration handlers
+        function handleBuyerRegistration() {
+            const form = document.getElementById('buyerForm');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            const password = document.getElementById('buyerPassword').value;
+            const confirmPassword = document.getElementById('buyerConfirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            
+            // Simulate registration
+            alert('Buyer registration successful! Please check your email for verification.');
+            bootstrap.Modal.getInstance(document.getElementById('registerModal')).hide();
+            showRegistrationTypeSelection(); // Reset modal for next use
+        }
+        
+        function handleSupplierRegistration() {
+            const form = document.getElementById('supplierForm');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            const password = document.getElementById('supplierPassword').value;
+            const confirmPassword = document.getElementById('supplierConfirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            
+            // Simulate registration
+            alert('Supplier registration successful! Our team will review your application and contact you within 2-3 business days.');
+            bootstrap.Modal.getInstance(document.getElementById('registerModal')).hide();
+            showRegistrationTypeSelection(); // Reset modal for next use
+        }
+        
+        // Reset modal when closed
+        document.getElementById('registerModal').addEventListener('hidden.bs.modal', function () {
+            showRegistrationTypeSelection();
+        });
+        
+        // Registration card hover effects
+        document.querySelectorAll('.registration-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.querySelector('.card').classList.add('border-primary');
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.querySelector('.card').classList.remove('border-primary');
+            });
+        });
+    </script>
+</body>
+</html>
