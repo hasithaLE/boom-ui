@@ -926,10 +926,61 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    
-    .hero-buttons .btn {
+      .hero-buttons .btn {
         width: 100%;
         max-width: 300px;
+    }
+    
+    /* Hero Carousel Mobile */
+    .hero-carousel-container {
+        height: 300px;
+        margin-top: 2rem;
+    }
+    
+    .hero-slide {
+        height: 300px;
+    }
+    
+    .slide-content {
+        padding: 1.5rem;
+        max-width: 300px;
+    }
+    
+    .slide-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .slide-description {
+        font-size: 0.9rem;
+    }
+    
+    .slide-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .slide-icon i {
+        font-size: 2.5rem !important;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 16px;
+        height: 16px;
     }
     
     .feature-item {
@@ -1384,3 +1435,66 @@ body {
         gap: 0.25rem;
     }
 }
+
+/* ==========================================
+   HERO CAROUSEL
+   ========================================== */
+
+.hero-carousel-container {
+    height: 400px;
+    position: relative;
+}
+
+/* Hero Carousel Mobile */
+    .hero-carousel-container {
+        height: 300px;
+        margin-top: 2rem;
+    }
+    
+    .hero-slide {
+        height: 300px;
+    }
+    
+    .slide-content {
+        padding: 1.5rem;
+        max-width: 300px;
+    }
+    
+    .slide-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .slide-description {
+        font-size: 0.9rem;
+    }
+    
+    .slide-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .slide-icon i {
+        font-size: 2.5rem !important;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
