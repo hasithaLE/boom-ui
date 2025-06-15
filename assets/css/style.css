@@ -1434,18 +1434,8 @@ body {
         text-align: center;
         gap: 0.25rem;
     }
-}
 
-/* ==========================================
-   HERO CAROUSEL
-   ========================================== */
-
-.hero-carousel-container {
-    height: 400px;
-    position: relative;
-}
-
-/* Hero Carousel Mobile */
+    /* Hero Carousel Mobile */
     .hero-carousel-container {
         height: 300px;
         margin-top: 2rem;
@@ -1497,4 +1487,15 @@ body {
         height: 16px;
     }
 }
+
+/* ==========================================
+   HERO CAROUSEL
+   ========================================== */
+
+.hero-carousel-container {
+    height: 400px;
+    position: relative;
+}
+
+
 
